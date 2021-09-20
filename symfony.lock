@@ -1,6 +1,6 @@
 {
     "composer/package-versions-deprecated": {
-        "version": "1.11.99.4"
+        "version": "1.11.99.3"
     },
     "doctrine/annotations": {
         "version": "1.0",
@@ -24,7 +24,7 @@
         "version": "3.1.2"
     },
     "doctrine/dbal": {
-        "version": "2.13.3"
+        "version": "2.13.2"
     },
     "doctrine/deprecations": {
         "version": "v0.5.3"
@@ -35,7 +35,7 @@
             "repo": "github.com/symfony/recipes",
             "branch": "master",
             "version": "2.4",
-            "ref": "bac5c852ff628886de2753215fe5eb1f9ce980fb"
+            "ref": "17a43e1f25756f87cfdd82a46704521d367d9e8c"
         },
         "files": [
             "config/packages/doctrine.yaml",
@@ -92,19 +92,19 @@
         "version": "3.4.1"
     },
     "laminas/laminas-eventmanager": {
-        "version": "3.4.0"
+        "version": "3.3.1"
     },
     "laminas/laminas-zendframework-bridge": {
-        "version": "1.4.0"
+        "version": "1.3.0"
     },
     "monolog/monolog": {
-        "version": "2.3.4"
+        "version": "2.3.2"
     },
     "myclabs/deep-copy": {
         "version": "1.10.2"
     },
     "nikic/php-parser": {
-        "version": "v4.13.0"
+        "version": "v4.12.0"
     },
     "phar-io/manifest": {
         "version": "2.0.3"
@@ -119,13 +119,13 @@
         "version": "5.2.2"
     },
     "phpdocumentor/type-resolver": {
-        "version": "1.5.0"
+        "version": "1.4.0"
     },
     "phpspec/prophecy": {
-        "version": "1.14.0"
+        "version": "1.13.0"
     },
     "phpunit/php-code-coverage": {
-        "version": "9.2.7"
+        "version": "9.2.6"
     },
     "phpunit/php-file-iterator": {
         "version": "3.0.5"
@@ -485,7 +485,7 @@
             "repo": "github.com/symfony/recipes",
             "branch": "master",
             "version": "5.3",
-            "ref": "9c4fcf79873f7400c885b90935f7163233615d6f"
+            "ref": "227eba5e0c7e8fc4beda3537c3d81dc23ba08182"
         },
         "files": [
             "config/packages/security.yaml"
@@ -590,10 +590,10 @@
         "version": "1.2.1"
     },
     "twig/extra-bundle": {
-        "version": "v3.3.3"
+        "version": "v3.3.1"
     },
     "twig/twig": {
-        "version": "v3.3.3"
+        "version": "v3.3.2"
     },
     "webmozart/assert": {
         "version": "1.10.0"

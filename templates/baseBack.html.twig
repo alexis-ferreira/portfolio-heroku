@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {# Run `composer require symfony/webpack-encore-bundle`
+       and uncomment the following Encore helpers to start using Symfony UX #}
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/bootstrap/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/fontawesome/all.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/back-office.css') }}">
+    {% endblock %}
+
+</head>
+<body class="col-md-12" style="background-color: white">
+<header class="border-bottom">
+    <section id="header">
+        <div class="title overflow-hidden">
+            <a href="{{ path('home') }}"></a>
+        </div>
+        <div class="title-back fs-5 d-flex align-items-center" style="color: black">
+            &nbsp;|&nbsp;{{ title | upper }}
+        </div>
+        <div id="btnMenuBack" style="width: 50px;" class="d-flex justify-content-center mb-1 position-relative">
+            <div id="menuBack">
+                <div class="add-website">
+                    <a href="{{ path('backOffice') }}" class="fs-5 text-decoration-none text-dark">Ajouter un site</a>
+                </div>
+                <div class="website-manager">
+                    <a href="{{ path('websiteManager') }}" class="fs-5 text-decoration-none text-dark">Liste des sites</a>
+                </div>
+            </div>
+            <button class="btn">
+                <i class="fas fa-sort-down text-dark"></i>
+            </button>
+        </div>
+    </section>
+</header>
+
+{% for message in app.flashes('success') %}
+    <div class="row justify-content-center mt-4">
+        <div class="alert alert-success col-md-6 text-center">{{ message }}</div>
+    </div>
+{% endfor %}
+{% for message in app.flashes('error') %}
+    <div class="row justify-content-center mt-4">
+        <div class="alert alert-danger col-md-6 text-center">{{ message }}</div>
+    </div>
+{% endfor %}
+
+{% block body %}{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/home.js') }}"></script>
+    <script src="{{ asset('js/bootstrap/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/fontawesome/all.min.js') }}"></script>
+    <script src="{{ asset('js/back.js') }}"></script>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,99 @@
+/******************** GENERAL ********************/
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.5) rgb(20, 20, 20);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgb(20, 20, 20);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    border: 5px solid rgb(20, 20, 20);
+}
+
+#fadeScrollBar {
+
+    width: 100%;
+
+    background-color: rgb(20, 20, 20);
+
+    opacity: 0;
+
+    position: absolute;
+    bottom: 0;
+
+    height: 15px;
+
+    transition: opacity 300ms;
+}
+
+#website-list-fade {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 30px;
+
+    background: linear-gradient(90deg, rgb(20, 20, 20) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+#website-list-fade-out {
+
+    position: absolute;
+    top: -15px;
+    right: 0;
+
+    height: 100%;
+    width: 30px;
+
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(20, 20, 20, 1) 100%);
+}
+
+#website-list > .website-list-title {
+
+    margin: 0 5%;
+}
+
+#website-list > .website-thumbnail-container > .website-thumbnail > .thumbnail {
+
+    height: 140px;
+
+    max-width: 250px;
+    min-width: 230px;
+
+    background-position: center !important;
+    background-size: 104% !important;
+    background-repeat: no-repeat !important;
+
+    border-radius: 7px;
+}
+
+@media all AND (min-width: 500px) {
+
+    #website-list {
+
+        padding: 0 50px;
+
+        transition: margin-left 1000ms, opacity 1000ms;
+
+        opacity: 0;
+
+        margin-left: 100px;
+    }
+
+    #website-list > .website-list-title {
+
+        margin: 0 2%;
+    }
+}

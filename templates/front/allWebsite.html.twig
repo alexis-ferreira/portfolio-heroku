@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <section id="website-list">
+        <div class="website-thumbnail-container position-relative">
+            <div id="previousWebsite" class="position-absolute top-0" style="margin-left: 5%">
+                <a href="{{ path('websiteList') }}">
+                    <i class="fas fa-arrow-left text-light"></i>
+                </a>
+            </div>
+            <div class="website-thumbnail col-md-12 d-flex flex-wrap justify-content-center pb-3 pt-4 ps-4 mb-4">
+
+                {% for website in websites %}
+
+                    <div class="thumbnail col-6 me-4 overflow-hidden mt-4" style="background: url('{{ asset('uploads/') }}{{ website.thumbnail }}');">
+                        <a href="{{ path('viewWebsite', {'id': website.id }) }}" class="website-title" style="padding: 100%">
+
+                        </a>
+                    </div>
+
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+

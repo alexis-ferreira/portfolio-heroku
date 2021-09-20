@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block body %}
+
+    {% if is_granted('ROLE_ADMIN') %}
+
+    <section id="panel-admin" class="d-flex">
+        <div class="panel-admin-container me-4">
+            <a class="link-panel" style="cursor: pointer; color: white" href="{{ path('backOffice') }}">
+                <i class="fas fa-wrench"></i>
+            </a>
+        </div>
+        <div class="logout">
+            <a class="text-decoration-none text-light" href="{{ path('logout') }}">Déconnexion</a>
+        </div>
+    </section>
+
+    {% endif %}
+
+    <section id="profile" style="height: 100%;">
+        <div class="container-profile d-flex flex-column justify-content-center align-items-center">
+            <div class="title-profile">Qui est-ce ?</div>
+            <div class="user-profile">
+                <div class="picture-user-profile-container">
+                    <div class="picture-user-profile mx-auto">
+                        <a id="hoverHome" href="{{ path('websiteList') }}"></a>
+                    </div>
+                </div>
+                <div class="username-profile-container">
+                    <div class="username-profile text-center">
+                        Alexis Ferreira
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+
+

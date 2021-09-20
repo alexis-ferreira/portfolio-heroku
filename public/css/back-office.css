@@ -1,0 +1,53 @@
+/******************** GENERAL ********************/
+
+#menuBack {
+
+    display: none;
+
+    position: absolute;
+    top: -30px;
+    left: -150px;
+
+    transition: top 300ms;
+
+    width: 150px;
+
+    background-color: white;
+
+    padding-left: 7px;
+
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#header > .title-back {
+
+    height: 100%;
+
+    background-color: white;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+#form-add-website {
+
+    font-family: sans-serif !important;
+}
+
+#form-add-website > form > div > div {
+
+    display: flex;
+    justify-content: center;
+}
+
+#form-add-website > form > .btn-submit {
+
+    display: flex;
+    justify-content: center;
+}

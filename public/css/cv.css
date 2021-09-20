@@ -1,0 +1,57 @@
+#cv {
+
+    opacity: 0;
+
+    transition: opacity 1s;
+}
+
+.separator {
+
+    width: 10%;
+    height: 2px;
+
+    background-color: white;
+}
+
+#cv > .container-cv > .cv-picture-container > .cv-picture {
+
+    height: 125px;
+    width: 125px;
+
+    background-size: contain !important;
+
+    border-radius: 100%;
+}
+
+@media all AND (min-width: 500px){
+
+    #cv > .container-cv > .cv-picture-container > .cv-picture {
+
+        width: 200px;
+        height: 200px;
+    }
+}
+
+#cv > .container-cv > .container-skills > .skills > .skill-progress > .skill-empty {
+
+    margin: 0 3px;
+
+    background: white;
+
+    height: 15px;
+    width: 15px;
+
+    border-radius: 100%;
+}
+
+#cv > .container-cv > .container-skills > .skills > .skill-progress > .skill {
+
+    margin: 0 3px;
+
+    background: #e50914;
+
+    height: 15px;
+    width: 15px;
+
+    border-radius: 100%;
+}

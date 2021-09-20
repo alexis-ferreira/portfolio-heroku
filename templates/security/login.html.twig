@@ -1,0 +1,28 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+    {% block body %}
+
+        <div class="container-login row justify-content-center my-5">
+            <div class="col-md-12">
+                <form method="post" action="{{ path('login') }}" class="col-md-4 mx-auto">
+                    <div class="mb-3">
+                        <label for="" class="mb-1">Email</label>
+                        <input class="form-control" placeholder="Saisissez votre e-mail" type="email" name="_username">
+                    </div>
+                    <div >
+                        <label for="" class="mb-1">Mot de passe</label>
+                        <input class="form-control" placeholder="Saisissez votre mot de passe" type="password" name="_password">
+
+                    </div>
+
+                    <div class="text-center">
+                        <button class="btn btn-primary mt-4" type="submit">Se connecter</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    {% endblock %}

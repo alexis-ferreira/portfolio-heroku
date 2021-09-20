@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+
+    <section id="view-website" class="mb-5 position-relative" style="opacity: 0; transition: opacity 1000ms; margin: 0 5%">
+        <div id="previousWebsite" class="position-absolute top-0">
+            <a href="{{ path('websiteList') }}">
+                <i class="fas fa-arrow-left text-light"></i>
+            </a>
+        </div>
+        <div class="website-content-container col-md-10 mx-auto">
+
+                <div class="website-title">
+                    <div class="h1 text-light text-center mt-5">{{ website.websiteTitle }}</div>
+                </div>
+            <div class="website-picture-container d-flex justify-content-center mt-5">
+                <div class="website-picture col-md-10 mx-4">
+                    <a href="{{ website.url }}" target="_blank">
+                        <img class="mx-auto" src="{{ asset('uploads/') }}{{ website.picture }}" alt="" style="width: 100%">
+                    </a>
+                </div>
+            </div>
+            <div class="website-description col-md-10 mx-auto mt-4">
+                <p class="fs-5 text-center">{{ website.description }}</p>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        let viewWebsite = document.getElementById('view-website');
+
+        addEventListener('DOMContentLoaded', function () {
+
+            viewWebsite.style.opacity = "1"
+        })
+    </script>
+
+{% endblock %}
+
+
+

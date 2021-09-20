@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+
+    <section id="website-list" class="mt-4">
+        <div class="website-list-title fs-3 mb-2">
+            <div class="ms-1">
+                Les projets
+            </div>
+        </div>
+        <div class="website-thumbnail-container position-relative">
+            <div id="fadeScrollBar"></div>
+            <div class="website-thumbnail col-md-12 overflow-auto d-flex pb-3 ps-4 mb-4">
+                <div id="website-list-fade"></div>
+
+                {% for site in website %}
+
+                    <div class="thumbnail col-6 me-4 overflow-hidden" style="background: url('{{ asset('uploads/') }}{{ site.thumbnail }}');">
+                        <a href="{{ path('viewWebsite', {'id': site.id }) }}" class="website-title" style="padding: 100%">
+
+                        </a>
+                    </div>
+
+                {% endfor %}
+
+                <a href="{{ path('allWebsite') }}" class="viewAllWebsite d-flex align-items-center pe-4 text-center text-decoration-none" style="min-width: 250px; color: white">
+                    Voir tout les projets<i class="fas fa-arrow-right"></i>
+                </a>
+
+                <div id="website-list-fade-out"></div>
+            </div>
+        </div>
+
+        <div class="website-list-title fs-3 mb-2 mt-5">
+            <div class="ms-1">
+                Vos recommandations
+            </div>
+        </div>
+        <div class="website-thumbnail-container position-relative">
+            <div id="fadeScrollBar"></div>
+            <div class="website-thumbnail col-md-12 overflow-auto d-flex pb-3 ps-4 mb-4">
+                <div id="website-list-fade"></div>
+
+                <div class="thumbnail col-6 me-4 overflow-hidden" style="background: url('{{ asset('images/alexis2.png') }}')">
+                    <a href="{{ path('cv') }}" class="website-title" style="padding: 100%">
+
+                    </a>
+                </div>
+
+                <div id="website-list-fade-out"></div>
+            </div>
+        </div>
+
+        <div class="website-list-title fs-3 mb-2 mt-5">
+            <div class="ms-1">
+                Les coordonnées
+            </div>
+        </div>
+        <div class="website-thumbnail-container position-relative">
+            <div id="fadeScrollBar"></div>
+            <div class="website-thumbnail col-md-12 overflow-auto d-flex pb-3 ps-4 mb-4">
+                <div id="website-list-fade"></div>
+
+                <div class="thumbnail col-6 me-4 overflow-hidden" style="background: url('{{ asset('images/gmail.png') }}')">
+                    <a href="mailto:alexis.ferreira71@gmail.com" class="website-title" style="padding: 100%">
+
+                    </a>
+                </div>
+                <div class="thumbnail col-6 me-4 overflow-hidden" style="background: url('{{ asset('images/linkedin.jpg') }}'); background-size: 120% !important;">
+                    <a href="https://www.linkedin.com/in/alexis-ferreira-dev/" target="_blank" class="website-title" style="padding: 100%">
+
+                    </a>
+                </div>
+                <div class="thumbnail col-6 me-4 overflow-hidden" style="background: url('{{ asset('images/github.jpeg') }}')">
+                    <a href="https://github.com/alexis-ferreira" target="_blank" class="website-title" style="padding: 100%">
+
+                    </a>
+                </div>
+
+                <div id="website-list-fade-out"></div>
+            </div>
+        </div>
+
+    </section>
+
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+
+    <section id="cv" class="mb-5 position-relative">
+        <div id="previousWebsite" class="position-absolute top-0" style="margin-left: 5%">
+            <a href="{{ path('websiteList') }}">
+                <i class="fas fa-arrow-left text-light"></i>
+            </a>
+        </div>
+        <div class="container-cv">
+            <div class="container-name">
+                <div class="name mx-auto text-center mt-5 fs-1">Alexis Ferreira</div>
+                <div class="stage text-center mx-auto mt-2 fs-3">En recherche de stage</div>
+            </div>
+            <div class="cv-picture-container">
+                <div class="cv-picture mx-auto my-4"
+                     style="background: url('{{ asset('images/cv-picture.png') }}');"></div>
+            </div>
+            <div class="container-skills">
+                <div class="title-skills text-center fs-2">Compétences</div>
+                <div class="separator mx-auto my-3"></div>
+                <div class="skills d-flex flex-column align-items-center">
+                    <div class="techno fs-4 mb-1">HTML / CSS</div>
+                    <div id="skill" class="skill-progress d-flex">
+                        <div class="skill"></div>
+                        <div class="skill"></div>
+                        <div class="skill"></div>
+                        <div class="skill"></div>
+                        <div class="skill-empty"></div>
+                    </div>
+                    <div class="techno fs-4 mb-1 mt-4">Javascript</div>
+                    <div class="skill-progress d-flex">
+                        <div class="skill"></div>
+                        <div class="skill"></div>
+                        <div class="skill-empty"></div>
+                        <div class="skill-empty"></div>
+                        <div class="skill-empty"></div>
+                    </div>
+                    <div class="techno fs-4 mb-1 mt-4">PHP</div>
+                    <div class="skill-progress d-flex">
+                        <div class="skill"></div>
+                        <div class="skill"></div>
+                        <div class="skill-empty"></div>
+                        <div class="skill-empty"></div>
+                        <div class="skill-empty"></div>
+                    </div>
+                    <div class="techno fs-4 mb-1 mt-4">MySQL</div>
+                    <div class="skill-progress d-flex">
+                        <div class="skill"></div>
+                        <div class="skill"></div>
+                        <div class="skill-empty"></div>
+                        <div class="skill-empty"></div>
+                        <div class="skill-empty"></div>
+                    </div>
+                    <div class="techno fs-4 mb-1 mt-4">Symfony</div>
+                    <div class="skill-progress d-flex">
+                        <div class="skill"></div>
+                        <div class="skill"></div>
+                        <div class="skill-empty"></div>
+                        <div class="skill-empty"></div>
+                        <div class="skill-empty"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="qualification-container">
+                <div class="qualification-title text-center fs-2 mt-5">Diplômes</div>
+                <div class="separator mx-auto my-3"></div>
+                <div class="qualification text-center m-2 fs-4">Développeur Web & Web Mobile (En préparation)</div>
+                <div class="qualification-subtile text-center my-2 fs-6" style="color: gray">Titre professionnel</div>
+                <div class="qualification-subtile text-center mt-2 mb-3 fs-6" style="color: gray">2021-2022</div>
+                <div class="qualification text-center fs-4 m-2">Préparation et Réalisation d'Ouvrages Electrique</div>
+                <div class="qualification-subtile text-center my-2 fs-6" style="color: gray">CAP</div>
+                <div class="qualification-subtile text-center my-2 fs-6" style="color: gray">2011-2013</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let sectionCV = document.getElementById('cv');
+
+        addEventListener('DOMContentLoaded', function () {
+
+            sectionCV.style.opacity = "1";
+        })
+    </script>
+
+{% endblock %}
+
